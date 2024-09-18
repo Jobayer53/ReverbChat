@@ -54,7 +54,7 @@ class ChatComponent extends Component
         $chatMessage = Message::whereId($event['message']['id'])
         ->with('sender:id,name', 'receiver:id,name')
         ->first();
-$this->chatMessage($chatMessage);
+    $this->chatMessage($chatMessage);
     //  $chatMessage = Message::whereId($event['message']['id'])->with('sender:id,name', 'receiver:id,name')->first();
     //  $this->chatMessage($chatMessage);
     }
